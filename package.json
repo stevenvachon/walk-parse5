@@ -1,0 +1,27 @@
+{
+  "name": "walk-parse5",
+  "description": "Recursively traverse a parse5 DOM tree.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Steven Vachon <contact@svachon.com> (https://www.svachon.com/)",
+  "repository": "stevenvachon/walk-parse5",
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^3.4.2",
+    "parse5": "^3.0.2"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "test": "mocha test --reporter=spec --check-leaks --bail"
+  },
+  "files": ["index.js"],
+  "keywords": [
+    "dom",
+    "html",
+    "parse5",
+    "traverse",
+    "walk"
+  ]
+}
