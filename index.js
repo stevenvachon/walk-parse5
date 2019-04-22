@@ -2,7 +2,7 @@
 
 
 
-function walk(node, callback)
+const walk = (node, callback) =>
 {
 	if (callback(node) === false)
 	{
@@ -11,13 +11,13 @@ function walk(node, callback)
 	else
 	{
 		let childNode,i;
-		
+
 		if (node.childNodes !== undefined)
 		{
 			i = 0;
 			childNode = node.childNodes[i];
 		}
-		
+
 		while (childNode !== undefined)
 		{
 			if (walk(childNode, callback) === false)
@@ -30,7 +30,7 @@ function walk(node, callback)
 			}
 		}
 	}
-}
+};
 
 
 

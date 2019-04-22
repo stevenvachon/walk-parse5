@@ -1,14 +1,14 @@
 "use strict";
-const expect = require("chai").expect;
-const it = require("mocha").it;
-const parse = require("parse5").parse;
+const {expect} = require("chai");
+const {it} = require("mocha");
+const {parse} = require("parse5");
 const walk = require("./");
 
 const html = parse("<!doctype html><html><head><title>title</title></head></body>content</body></html>");
 
 
 
-it("accepts a document node", function()
+it("accepts a document node", () =>
 {
 	const history = [];
 
@@ -19,7 +19,7 @@ it("accepts a document node", function()
 
 
 
-it("accepts a child node", function()
+it("accepts a child node", () =>
 {
 	const history = [];
 
@@ -30,11 +30,11 @@ it("accepts a child node", function()
 
 
 
-it("can optionally be killed", function()
+it("can optionally be killed", () =>
 {
 	const history = [];
 
-	walk(html, function(node)
+	walk(html, node =>
 	{
 		history.push(node.nodeName);
 
